@@ -1,0 +1,6 @@
+node_modules/*
+./api_rest/test-report
+./api_rest/.env
+./api_rest/jest.config.js
+./api_rest/package-lock.json
+./api_rest/package.json
