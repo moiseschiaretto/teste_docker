@@ -4,9 +4,7 @@ WORKDIR /api_rest
 
 RUN git clone https://github.com/moiseschiaretto/teste_docker.git ./
 
-RUN chown -R node:node /api_rest
-
-USER node
+RUN chmod -R +x /api_rest
 
 RUN npm install
 
