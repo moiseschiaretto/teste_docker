@@ -26,6 +26,7 @@ Reiniciar o Jenkins
 1.4 Docker Compose Build Step
 1.5 HTML Publisher
 
+
 **2. Criar o Job (Nova tarefa)**
 2.1 Preencher o campo "Entre com um nome de item"
 API_OrcApenasDanosPintMult
