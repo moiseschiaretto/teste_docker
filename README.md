@@ -1,7 +1,7 @@
-## Dokerfile
+## Dockerfile e Jenkisfile
 
-### Pré-requisitos para criar a imagem e o container com Docker Desktop:
 
+### Dockerfile - Pré-requisitos para criar a imagem e o container com Docker Desktop:
 
     1. Docker Desktop instalado na máquina
     2. Docker Desktop aberto na máquina
