@@ -2,7 +2,7 @@
 
 ### Pré-requisitos para criar a imagem e o container com Docker Desktop:
 
-    **1. Docker Desktop instalado na máquina**
+    1. Docker Desktop instalado na máquina
     2. Docker Desktop aberto na máquina
     3. Arquivo "Dockerfile" com os comandos para gerar a imagem e container do projeto
     4. Terminal / PowerShell da IDE VSCode executar os comandos abaixo:
