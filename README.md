@@ -60,7 +60,8 @@
 
 ## Jenkins - Pipeline do Docker e do script do Jenkinsfile
 
-| Job - Script Jenkinsfile | Pipeline Step Docker  | Pipeline Docker  | Pipeline Docker 	| Job Executada  |
-|--------------------------|-----------------------|------------------|---------------------|----------------|
-| <img width="671" alt="01_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/8d9be41f-db05-4711-8ae3-c8c49804c2e0"> | <img width="671" alt="02_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/e77294e7-6797-4064-b34e-d56014a8652e"> | <img width="675" alt="03_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/0f43912c-daa9-4793-906d-c8a53e55a12a"> | <img width="675" alt="04_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/d19b60cc-2953-4365-a63c-db1d16541709"> | <img width="674" alt="05_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/82a6788c-185f-4c98-be31-9c0e28d2443c"> |
+| Job - Script Jenkinsfile | Pipeline Step Docker  | Pipeline Docker  | Pipeline Docker 	| Job Executada  | Report.html  [C:\Windows\Temp\report] |
+|--------------------------|-----------------------|------------------|---------------------|----------------|---------------------------------------|
+| <img width="671" alt="01_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/8d9be41f-db05-4711-8ae3-c8c49804c2e0"> | <img width="671" alt="02_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/e77294e7-6797-4064-b34e-d56014a8652e"> | <img width="675" alt="03_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/0f43912c-daa9-4793-906d-c8a53e55a12a"> | <img width="675" alt="04_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/d19b60cc-2953-4365-a63c-db1d16541709"> | <img width="674" alt="05_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/82a6788c-185f-4c98-be31-9c0e28d2443c"> | <img width="671" alt="06_Pipeline_Jenkins_Report_HTML" src="https://github.com/user-attachments/assets/b06a9cb8-e9cd-4278-bf1e-8d40d8d22ff9"> |
+
 
