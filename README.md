@@ -15,7 +15,7 @@
     10. Visualizar também no software "Docker Desktop", painel à esquerda com as opções [Containers] e [Images]
 
 
-### Jenkins
+### Jenkins >> Plugins >> Job >> Pipeline
 
     1. Dependências para Instalar no Jenkins
     Gerenciar Jenkins >> Plugins >> Plugins Disponíveis
