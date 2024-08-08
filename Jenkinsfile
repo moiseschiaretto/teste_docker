@@ -40,7 +40,7 @@ pipeline {
                 script {
                     // Copia o arquivo de relatório do contêiner para o host
                     powershell '''
-                    docker cp container:/api_rest/test-report/report.html C:\\Windows\\Temp\\report.html
+                    docker cp container:/api_rest/test-report/report.html C:\\Windows\\Temp\\report\\report.html
                     '''
                 }
             }
@@ -52,8 +52,8 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'C:\\Windows\\Temp',
-                    reportFiles: 'relatorio.html',
+                    reportDir: 'C:\\Windows\\Temp\\report',
+                    reportFiles: 'report.html',
                     reportName: 'My Reports',
                     reportTitles: 'The Report'
                 ])
