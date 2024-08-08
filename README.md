@@ -17,7 +17,7 @@
 
 ### Jenkins
 
-    **1. Dependências para Instalar no Jenkins**
+    1. Dependências para Instalar no Jenkins
     Gerenciar Jenkins >> Plugins >> Plugins Disponíveis
     Pesquisar por "nome" do Plugin >> Instalar
     Reiniciar o Jenkins
@@ -28,7 +28,7 @@
     1.5 HTML Publisher
 
 
-    **2. Criar o Job (Nova tarefa)**
+    2. Criar o Job (Nova tarefa)
     2.1 Preencher o campo "Entre com um nome de item"
     API_OrcApenasDanosPintMult
     2.2 Selecionar a opção "Pipeline"
@@ -42,7 +42,7 @@
     Clicar no botão "Salvar"
 
 
-    **3. Em Painel de Controle > API_OrcApenasDanosPintMult**
+    3. Em Painel de Controle > API_OrcApenasDanosPintMult
     3.1 Estando no Job criado, clicar no Painel à esquerda na opção [Construir agora]
     Esta opção [Construir agora] executa o script de execução do projeto
     No Painel à esquerda clicar no Frame ["Histórico de construções Tendência"]
@@ -56,4 +56,9 @@
     3.3 Para visualizar o arquivo "report.html" gerado da execução da "Pipeline", acessar:
     C:\Windows\Temp\report
     Arquivo com o nome "report.html"".
+
+
+## Jenkins - Pipeline do Docker e do script do Jenkinsfile
+
+
 
