@@ -65,19 +65,19 @@ CMD [ "npm", "start" ]
 
     2. Criar o Job (Nova tarefa)
     2.1 Preencher o campo "Entre com um nome de item"
-    API_OrcApenasDanosPintMult
+    API_JS_Test
     2.2 Selecionar a opção "Pipeline"
     2.3 Clicar no botão "Tudo certo"
     2.4 Configurar
     Preencher o campo "Descrição"
-    API_OrcApenasDanosPintMult
+    API_JS_Test
     Em "Pipeline" selecionar no campo "Definition" a opção ["Pipeline script"]
     Copiar e Colar o script no campo "Script"
     Selecionar a opção "Use Groovy Sandbox"
     Clicar no botão "Salvar"
 
 
-    3. Em Painel de Controle > API_OrcApenasDanosPintMult
+    3. Em Painel de Controle > API_JS_Test
     3.1 Estando no Job criado, clicar no Painel à esquerda na opção [Construir agora]
     Esta opção [Construir agora] executa o script de execução do projeto
     No Painel à esquerda clicar no Frame ["Histórico de construções Tendência"]
