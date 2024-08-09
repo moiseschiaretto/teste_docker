@@ -1,4 +1,4 @@
-## Docker Desktop >> Image and Conatiner
+## Docker Desktop >> Image and Container
 
 ### Dockerfile - Pré-requisitos para criar a imagem e o container com Docker Desktop.
 
