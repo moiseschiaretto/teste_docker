@@ -1,7 +1,7 @@
-## Dockerfile e Jenkisfile
+<img width="675" alt="01_Jenkins_Access_Login" src="https://github.com/user-attachments/assets/99356e36-26b5-4d3f-b441-aabbfdd492f8">## Dockerfile e Jenkisfile
 
 
-### Dockerfile - Pré-requisitos para criar a imagem e o container com Docker Desktop:
+### Dockerfile - Pré-requisitos para criar a imagem e o container com Docker Desktop.
 
     1. Docker Desktop instalado na máquina
     2. Docker Desktop aberto na máquina
@@ -21,16 +21,25 @@
 
 ### Jenkins >> Plugins >> Job >> Pipeline
 
-    1. Dependências para Instalar no Jenkins
+### Jenkins - Pré-requisitos criar uma conta no Jenkins e instalar o Jenkins na máquina.
+
+    1. Acessar o link do Jenkins no navegador Web, por exemplo [http://localhost:1010/login]
+    1.1 Efetuar o "login" no Jenkins
+    1.2 Dependências para Instalar no Jenkins
     Gerenciar Jenkins >> Plugins >> Plugins Disponíveis
     Pesquisar por "nome" do Plugin >> Instalar
     Reiniciar o Jenkins
-    1.1 Git
-    1.2 Pipeline
-    1.3 Docker Pipeline
-    1.4 Docker Compose Build Step
-    1.5 HTML Publisher
+    1.3 Git
+    1.4 Pipeline
+    1.5 Docker Pipeline
+    1.6 Docker Compose Build Step
+    1.7 HTML Publisher
 
+<br>
+| Jenkins Access Login     | Jenkins Setup Plugins  | Jenkins Setup Plugins  | Jenkins Created Job | Jenkins Created Job | Pipeline of Jenkins |
+|--------------------------|------------------------|------------------------|---------------------|---------------------|---------------------|
+| <img width="675" alt="01_Jenkins_Access_Login" src="https://github.com/user-attachments/assets/60f6270e-2a6a-4fe3-bab7-39dfac3a5fa4"> | <img width="678" alt="02_Jenkins_Setup_Plugins" src="https://github.com/user-attachments/assets/e044d71d-6077-464c-a3ba-a52109b7c76b"> | <img width="677" alt="03_Jenkins_Setup_Plugins" src="https://github.com/user-attachments/assets/59dd2c8a-3deb-4cce-8dfb-9d0fd1bd7d6a"> | <img width="677" alt="04_Jenkins_Created_Jobs" src="https://github.com/user-attachments/assets/0edc5c6a-9b99-469a-9010-67733e6cc50f"> | <img width="678" alt="05_Jenkins_Created_Jobs" src="https://github.com/user-attachments/assets/acfb2b05-f6b1-49ce-a3cb-deedb6b94801"> | <img width="671" alt="06_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/159e58f5-4e99-45a3-a0d8-45de6b4601e1"> |
+<br>
 
     2. Criar o Job (Nova tarefa)
     2.1 Preencher o campo "Entre com um nome de item"
