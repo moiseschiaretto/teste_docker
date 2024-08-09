@@ -1,5 +1,4 @@
-<img width="675" alt="01_Jenkins_Access_Login" src="https://github.com/user-attachments/assets/99356e36-26b5-4d3f-b441-aabbfdd492f8">## Dockerfile e Jenkisfile
-
+## Docker Desktop com Jenkins Pipeline
 
 ### Dockerfile - Pré-requisitos para criar a imagem e o container com Docker Desktop.
 
