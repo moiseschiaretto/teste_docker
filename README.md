@@ -14,6 +14,28 @@
     10. Visualizar também no software "Docker Desktop", painel à esquerda com as opções [Containers] e [Images]
 
 
+### Conteúdo do arquivo do "Dockerfile"
+
+```
+
+FROM node:latest
+
+WORKDIR /api_rest
+
+RUN git clone https://github.com/moiseschiaretto/teste_docker.git ./
+
+RUN chmod -R +x /api_rest
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
+
+```
+
+
+
 | Docker - Buil of Image   | Docker Desktop - Image   | Docker - Conatiner / Execution | Docker - Conatiner / Execution | List All Images and Conatiners | Docker Desktop - Conatiner |
 |--------------------------|--------------------------|--------------------------------|--------------------------------|--------------------------------|----------------------------|
 | <img width="681" alt="01_BUILD_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/a52a1279-f871-48f5-b7aa-e1760fb42885"> | <img width="678" alt="02_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/68b2f12c-325b-4522-bca4-c6b68a94ef24"> | <img width="679" alt="03_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/d3ddeeb4-708f-48f4-9ac3-ffc35ab88d97"> | <img width="679" alt="04_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/452008bf-389a-4b85-a27c-644265f8e1b9"> | <img width="679" alt="05_Listar_IMG_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/111efb25-b717-44df-bfc8-1d91bfa4947c"> | <img width="676" alt="06_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/102df72c-87c4-4405-9517-ddd88b377563"> |
@@ -78,4 +100,87 @@
 |--------------------------|-----------------------|------------------|---------------------|----------------|---------------------------------------|
 | <img width="671" alt="01_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/8d9be41f-db05-4711-8ae3-c8c49804c2e0"> | <img width="671" alt="02_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/e77294e7-6797-4064-b34e-d56014a8652e"> | <img width="675" alt="03_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/0f43912c-daa9-4793-906d-c8a53e55a12a"> | <img width="675" alt="04_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/d19b60cc-2953-4365-a63c-db1d16541709"> | <img width="674" alt="05_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/82a6788c-185f-4c98-be31-9c0e28d2443c"> | <img width="671" alt="06_Pipeline_Jenkins_Report_HTML" src="https://github.com/user-attachments/assets/b06a9cb8-e9cd-4278-bf1e-8d40d8d22ff9"> |
 <br>
+
+### Conteúdo do arquivo do "Jenkinsfile"
+
+```
+
+pipeline {
+    agent any
+    stages {
+        stage('Baixar Dockerfile') {
+            steps {
+                script {
+                    // Baixa o Dockerfile do GitHub usando PowerShell
+                    powershell '''
+                    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/moiseschiaretto/teste_docker/main/Dockerfile" -OutFile "Dockerfile"
+                    '''
+                }
+            }
+        }
+        stage('Construir Imagem Docker') {
+            steps {
+                script {
+                    // Construa a imagem Docker usando PowerShell
+                    powershell '''
+                    docker build -t test_img:latest .
+                    '''
+                }
+            }
+        }
+        stage('Executar Contêiner Docker') {
+            steps {
+                script {
+                    // Executa o contêiner Docker usando PowerShell
+                    powershell '''
+                    docker run -d --name container test_img:latest
+
+                    docker logs container
+                    
+                    '''
+                    sleep(time: 30, unit: 'SECONDS')
+                }
+            }
+        }
+        stage('Copiar Relatório do Contêiner') {
+            steps {
+                script {
+                    // Copia o arquivo de relatório do contêiner para o host
+                    powershell '''
+                    docker cp container:/api_rest/test-report/report.html C:\\Windows\\Temp\\\\report\\report.html
+                    '''
+                }
+            }
+        }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'C:\\Windows\\Temp\\report',
+                    reportFiles: 'report.html',
+                    reportName: 'My Reports',
+                    reportTitles: 'The Report'
+                ])
+            }
+        }
+        
+    }
+}
+
+
+```
+<br>
+
+## Importante: arquivo do "Jenkinsfile"
+
+### Sistema Operacional Windows utilizar o comando: "powershell"
+
+### Sistema Operacional Linux utilizar o comando: "sh"
+
+
+
+
 
