@@ -14,7 +14,7 @@
     9. Exibe todas as imagens e containers criados [docker ps -a]
     10. Visualizar também no software "Docker Desktop", painel à esquerda com as opções [Containers] e [Images]
 
-<br>
+
 | Docker - Buil of Image   | Docker Desktop - Image   | Docker - Conatiner / Execution | Docker - Conatiner / Execution | List All Images and Conatiners | Docker Desktop - Conatiner |
 |--------------------------|--------------------------|--------------------------------|--------------------------------|--------------------------------|----------------------------|
 | <img width="681" alt="01_BUILD_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/a52a1279-f871-48f5-b7aa-e1760fb42885"> | <img width="678" alt="02_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/68b2f12c-325b-4522-bca4-c6b68a94ef24"> | <img width="679" alt="03_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/d3ddeeb4-708f-48f4-9ac3-ffc35ab88d97"> | <img width="679" alt="04_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/452008bf-389a-4b85-a27c-644265f8e1b9"> | <img width="679" alt="05_Listar_IMG_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/111efb25-b717-44df-bfc8-1d91bfa4947c"> | <img width="676" alt="06_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/102df72c-87c4-4405-9517-ddd88b377563"> |
@@ -36,7 +36,7 @@
     1.6 Docker Compose Build Step
     1.7 HTML Publisher
 
-<br>
+
 | Jenkins Access Login     | Jenkins Setup Plugins  | Jenkins Setup Plugins  | Jenkins Created Job | Jenkins Created Job | Pipeline of Jenkins |
 |--------------------------|------------------------|------------------------|---------------------|---------------------|---------------------|
 | <img width="675" alt="01_Jenkins_Access_Login" src="https://github.com/user-attachments/assets/60f6270e-2a6a-4fe3-bab7-39dfac3a5fa4"> | <img width="678" alt="02_Jenkins_Setup_Plugins" src="https://github.com/user-attachments/assets/e044d71d-6077-464c-a3ba-a52109b7c76b"> | <img width="677" alt="03_Jenkins_Setup_Plugins" src="https://github.com/user-attachments/assets/59dd2c8a-3deb-4cce-8dfb-9d0fd1bd7d6a"> | <img width="677" alt="04_Jenkins_Created_Jobs" src="https://github.com/user-attachments/assets/0edc5c6a-9b99-469a-9010-67733e6cc50f"> | <img width="678" alt="05_Jenkins_Created_Jobs" src="https://github.com/user-attachments/assets/acfb2b05-f6b1-49ce-a3cb-deedb6b94801"> | <img width="671" alt="06_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/159e58f5-4e99-45a3-a0d8-45de6b4601e1"> |
