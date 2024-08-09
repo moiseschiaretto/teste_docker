@@ -14,6 +14,10 @@
     9. Exibe todas as imagens e containers criados [docker ps -a]
     10. Visualizar também no software "Docker Desktop", painel à esquerda com as opções [Containers] e [Images]
 
+| Docker - Buil of Image   | Docker Desktop - Image   | Docker - Conatiner / Execution | Docker - Conatiner / Execution | Docker Desktop - Conatiner  |
+|--------------------------|--------------------------|--------------------------------|--------------------------------|-----------------------------|
+| <img width="677" alt="01_BUILD_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/0729f099-6677-4d55-a225-38b8e970eff4"> | <img width="678" alt="02_IMG_Docker_Desktop" src="https://github.com/user-attachments/assets/68b2f12c-325b-4522-bca4-c6b68a94ef24"> | <img width="679" alt="03_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/d3ddeeb4-708f-48f4-9ac3-ffc35ab88d97"> | <img width="679" alt="04_Criando_Executando_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/452008bf-389a-4b85-a27c-644265f8e1b9"> | <img width="676" alt="05_Container_Docker_Desktop" src="https://github.com/user-attachments/assets/e9cf1de8-d804-4e15-a830-811f9cfb8209"> |
+<br>
 
 ### Jenkins >> Plugins >> Job >> Pipeline
 
@@ -63,5 +67,5 @@
 | Job - Script Jenkinsfile | Pipeline Step Docker  | Pipeline Docker  | Pipeline Docker 	| Job Executada  | Report.html  [C:\Windows\Temp\report] |
 |--------------------------|-----------------------|------------------|---------------------|----------------|---------------------------------------|
 | <img width="671" alt="01_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/8d9be41f-db05-4711-8ae3-c8c49804c2e0"> | <img width="671" alt="02_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/e77294e7-6797-4064-b34e-d56014a8652e"> | <img width="675" alt="03_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/0f43912c-daa9-4793-906d-c8a53e55a12a"> | <img width="675" alt="04_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/d19b60cc-2953-4365-a63c-db1d16541709"> | <img width="674" alt="05_Pipeline_Jenkins" src="https://github.com/user-attachments/assets/82a6788c-185f-4c98-be31-9c0e28d2443c"> | <img width="671" alt="06_Pipeline_Jenkins_Report_HTML" src="https://github.com/user-attachments/assets/b06a9cb8-e9cd-4278-bf1e-8d40d8d22ff9"> |
-
+<br>
 
