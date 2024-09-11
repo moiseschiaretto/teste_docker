@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
 "scripts": {
-  "test1": "powershell -Command \"$env:REPORT_PATH='./report/report_test1.js.html'; npx jest 01_test1.js\"",
-  "test2": "powershell -Command \"$env:REPORT_PATH='./report/report_test2.js.html'; npx jest 02_test2.js\"",
-  "test3": "powershell -Command \"$env:REPORT_PATH='./report/report_test3.js.html'; npx jest 03_test3.js\"",
-  "test_all": "npm run test1 && npm run test2 && npm run test3"
+  "test1": "npx jest 01_test1.js
 },
   "keywords": [],
   "author": "",
