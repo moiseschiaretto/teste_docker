@@ -24,41 +24,66 @@ pipeline {
         stage('Executar Contêiner Docker') {
             steps {
                 script {
-                    // Executa o contêiner Docker usando PowerShell
+                    // Executa o contêiner Docker usando PowerShell e monta um volume para persistir relatórios
                     powershell '''
-                    docker run -d --name container test_img:latest
-
-                    docker logs container
-                    
+                    docker run -d --name container -v C:\\Windows\\Temp\\report:/api_rest/test-report test_img:latest
                     '''
-                    sleep(time: 30, unit: 'SECONDS')
+                    sleep(time: 30, unit: 'SECONDS')  // Aguarda os testes terminarem
                 }
             }
         }
-        stage('Copiar Relatório do Contêiner') {
+        stage('Executar Testes') {
             steps {
                 script {
-                    // Copia o arquivo de relatório do contêiner para o host
+                    // Executa todos os testes dentro do contêiner
                     powershell '''
-                    docker cp container:/api_rest/test-report/report.html C:\\Windows\\Temp\\report\\report.html
+                    docker exec container powershell -Command "npm run test_all"
                     '''
                 }
             }
         }
-
-        stage('Publish HTML Report') {
+        stage('Copiar Relatórios do Contêiner') {
             steps {
-                publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'C:\\Windows\\Temp\\report',
-                    reportFiles: 'report.html',
-                    reportName: 'My Reports',
-                    reportTitles: 'The Report'
-                ])
+                script {
+                    // Copia os arquivos de relatório do contêiner para o diretório de trabalho no Windows
+                    powershell '''
+                    docker cp container:/api_rest/test-report C:\\Windows\\Temp\\report
+                    '''
+                }
             }
         }
-        
+        stage('Publicar Relatórios HTML') {
+            steps {
+                script {
+                    // Publica todos os relatórios HTML gerados
+                    powershell '''
+                    $reportFiles = Get-ChildItem -Path "C:\\Windows\\Temp\\report" -Filter *.html
+                    foreach ($file in $reportFiles) {
+                        $fileName = $file.Name
+                        echo "Publicando $fileName"
+                        publishHTML(target: [
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: 'C:\\Windows\\Temp\\report',
+                            reportFiles: $fileName,
+                            reportName: 'Test Report',
+                            reportTitles: $fileName
+                        ])
+                    }
+                    '''
+                }
+            }
+        }
+    }
+    post {
+        always {
+            // Remove o contêiner após a execução dos testes
+            script {
+                powershell '''
+                docker rm -f container || true
+                '''
+            }
+        }
     }
 }
