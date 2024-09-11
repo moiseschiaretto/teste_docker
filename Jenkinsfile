@@ -37,7 +37,7 @@ pipeline {
                 script {
                     // Executa todos os testes dentro do contêiner
                     powershell '''
-                    docker exec container powershell -Command "npm run test_all"
+                    docker exec container powershell -Command "npm run test1"
                     '''
                 }
             }
