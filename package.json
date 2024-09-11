@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
 "scripts": {
-  "test1": "npx jest 01_test1.js,
+  "test1": "npx jest 01_test1.js"
 },
   "keywords": [],
   "author": "",
